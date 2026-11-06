@@ -91,6 +91,7 @@ function cellAt(ev: MouseEvent | PointerEvent) {
 canvas.addEventListener('pointermove', (e) => { view.hover = cellAt(e); });
 canvas.addEventListener('pointerleave', () => { view.hover = null; });
 canvas.addEventListener('pointerdown', (e) => {
+  if (e.button !== 0) return;
   const c = cellAt(e);
   if (!c) return;
   view.hover = c;
@@ -125,6 +126,7 @@ let cardWave = -1;
 function buildTimeline() {
   const tl = $('timeline');
   tl.innerHTML = '';
+  tl.style.gridTemplateColumns = `repeat(${game.waves.length}, 1fr)`;
   const maxW = Math.max(...game.waves.map((w) => w.round.work));
   game.waves.forEach((w, i) => {
     const c = document.createElement('div');
@@ -228,13 +230,16 @@ function intro() {
 }
 function outro() {
   const won = game.phase === 'won';
-  const best = Math.max(game.score, Number(localStorage.getItem(bestKey()) || 0));
-  localStorage.setItem(bestKey(), String(best));
+  let best = game.score;
+  try {
+    best = Math.max(game.score, Number(localStorage.getItem(bestKey()) || 0));
+    localStorage.setItem(bestKey(), String(best));
+  } catch { /* storage disabled or full: still show the results */ }
   const label = mode === 'daily' ? `Daily siege #${today()}` : 'Random siege';
   const text = won
     ? `I held Squeektoshi's wheel through all ${game.waves.length} waves of ${label} in Squeek Siege. Score ${game.score}, wheel ${game.lives}/${game.maxLives}.`
     : `The bugs jammed Squeektoshi's wheel on wave ${game.waveIndex + 1}/${game.waves.length} of ${label} in Squeek Siege. Score ${game.score}.`;
-  const share = `https://x.com/intent/post?text=${encodeURIComponent(text + ' Every wave is a real round the hamster ran on @squeekchain.')}&url=${encodeURIComponent(location.origin)}`;
+  const share = `https://x.com/intent/post?text=${encodeURIComponent(text + ' Every wave is a real round the hamster ran on @squeekchain.')}&url=${encodeURIComponent(location.origin + location.pathname)}`;
   overlay.innerHTML = `<div class="card">
     <h2>${won ? 'WHEEL HELD' : 'WHEEL JAMMED'}</h2>
     <p class="sub">${label} · wave ${Math.min(game.waveIndex + 1, game.waves.length)}/${game.waves.length} · ${game.kills} bugs squashed · ${Math.round(game.stats.powerMade)} wheel power made</p>
@@ -254,7 +259,11 @@ function outro() {
 function setup(m: 'daily' | 'free') {
   mode = m;
   const label = m === 'daily' ? `daily-${today()}` : `free-${Math.floor(Math.random() * 1e9)}`;
-  const rounds = pickWindow(allRounds, hashStr(label), WAVES_PER_SIEGE);
+  // a daily siege only sees rounds settled before today's UTC midnight, so everyone plays the same one all day
+  const dayStart = Math.floor(Date.now() / 86_400_000) * 86_400_000;
+  const settled = allRounds.filter((r) => Date.parse(r.at) < dayStart);
+  const pool = m === 'daily' && settled.length >= 10 ? settled : allRounds;
+  const rounds = pickWindow(pool, hashStr(label), Math.min(WAVES_PER_SIEGE, pool.length));
   game = newGame(rounds, label);
   view.selected = null;
   choose(null);

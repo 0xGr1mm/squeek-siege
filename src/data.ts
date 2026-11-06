@@ -66,8 +66,10 @@ export async function loadRounds(): Promise<{ rounds: Round[]; source: 'live' | 
 export async function loadStatus(): Promise<LiveStatus> {
   try {
     const res = await fetch(`${API}/status`, { cache: 'no-store' });
+    if (!res.ok) throw new Error(`status ${res.status}`);
     const d = await res.json();
-    const m = d.measurement || {};
+    if (!d.measurement) throw new Error('no measurement');
+    const m = d.measurement;
     const fresh = m.freshness === 'online' || m.freshness === 'fresh';
     const rpm = Number(m.rpmMilli || 0) / 1000;
     return {
