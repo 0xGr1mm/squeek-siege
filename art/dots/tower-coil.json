@@ -1,0 +1,31 @@
+{
+ "source": "tower-coil.png",
+ "cell": 21.25,
+ "w": 8,
+ "h": 14,
+ "palette": {
+  "a": "#5b1f07",
+  "b": "#b8fefa",
+  "c": "#e79854",
+  "d": "#1fadac",
+  "e": "#84a2b9",
+  "f": "#2ff8ed",
+  "g": "#506b83"
+ },
+ "rows": [
+  "........",
+  "..fff...",
+  "..fff...",
+  "..dfd...",
+  ".aceac..",
+  ".acccc..",
+  "..aaca..",
+  ".acaca..",
+  "..acca..",
+  ".egagg..",
+  ".gcacgg.",
+  ".gcacgg.",
+  "geeeggga",
+  "agggagga"
+ ]
+}

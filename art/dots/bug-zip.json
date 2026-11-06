@@ -1,0 +1,25 @@
+{
+ "source": "bug-zip.png",
+ "cell": 23.75,
+ "w": 10,
+ "h": 9,
+ "palette": {
+  "a": "#5a1a02",
+  "b": "#ebfef8",
+  "c": "#fc5491",
+  "d": "#82e7d8",
+  "e": "#db0a6b",
+  "f": "#fea1be"
+ },
+ "rows": [
+  "......a...",
+  "...aefe...",
+  "bb.bafbabb",
+  ".bdbaebbb.",
+  ".beeeeeab.",
+  "..eeeeead.",
+  "..eeffe...",
+  "...eccc...",
+  "...a..a..."
+ ]
+}

@@ -1,0 +1,39 @@
+{
+ "source": "hamster-a.png",
+ "cell": 34.75,
+ "w": 30,
+ "h": 21,
+ "palette": {
+  "a": "#fca611",
+  "b": "#000000",
+  "c": "#fdfcfd",
+  "d": "#bb4b01",
+  "e": "#fd918f",
+  "f": "#fde7b9",
+  "g": "#de5e02",
+  "h": "#edcb90"
+ },
+ "rows": [
+  ".................ggg..........",
+  "................aeedd.........",
+  "..........gggg..aeeedagg......",
+  ".......aafffaaggaeeedaaagg....",
+  "......afffaaaaaadaedaaaaagg...",
+  ".....affaaaaaaaggdaaaaabaagg..",
+  "...ggaaaaaaaaggggaaaaaaabaaa..",
+  "..ggaaaaaaaagggaaaaaaaabcaaaa.",
+  "..ggagggaaaaaggaaaaffaabbaafee",
+  ".gaaggaaaaaaaaaaaaffffaaafffee",
+  ".gaggaaaaaaaaaaaaffffffffdffff",
+  ".gaggaaaaaaaaaaaaffffffffadff.",
+  "..ggaaaaafffaaaaaaafffffffff..",
+  "...gaaaafffffaaaaaaaaffff.....",
+  "...gaaffffffffffaaaaaffd......",
+  "..eefffffffffffffaaaffaee.....",
+  ".eeeaaaaahhfffffaffffaaeee....",
+  "eee...aahhhhhhaafff.....ee....",
+  "ee.......dddd.................",
+  "..........ee..................",
+  "...........eee................"
+ ]
+}

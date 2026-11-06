@@ -1,0 +1,31 @@
+{
+ "source": "tower-spitter.png",
+ "cell": 29.0,
+ "w": 13,
+ "h": 14,
+ "palette": {
+  "a": "#fac337",
+  "b": "#5b1b03",
+  "c": "#fce9c0",
+  "d": "#b15a08",
+  "e": "#ef8509",
+  "f": "#fbd066",
+  "g": "#f5a017"
+ },
+ "rows": [
+  "..........bb.",
+  "..bbbba.bbcbb",
+  ".baacfabcccbb",
+  "baaacabcaaeab",
+  "eaaaaaaaeeb..",
+  "eaaaaaaeeb...",
+  "dgaaaaaeeb...",
+  ".egaaagee....",
+  "..deeeed.....",
+  ".bedeebab....",
+  ".eeaacccgb...",
+  "bcggaaacabb..",
+  "baebeeeeeeb..",
+  "bbbbbbbbbbb.."
+ ]
+}

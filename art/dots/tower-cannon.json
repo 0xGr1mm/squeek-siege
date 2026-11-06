@@ -1,0 +1,30 @@
+{
+ "source": "tower-cannon.png",
+ "cell": 23.5,
+ "w": 9,
+ "h": 13,
+ "palette": {
+  "a": "#fb8e01",
+  "b": "#fee6b7",
+  "c": "#5d1607",
+  "d": "#ec2223",
+  "e": "#fcb331",
+  "f": "#a21009",
+  "g": "#cd4404"
+ },
+ "rows": [
+  "....cee..",
+  "....ecceg",
+  "...caecee",
+  "..cbbaegg",
+  ".abbaagc.",
+  "gabbaagbc",
+  "gaabaacba",
+  "ggaaaacaa",
+  ".ggaagcg.",
+  "cagggaac.",
+  "gaaaaddac",
+  ".ggggggg.",
+  "..ccccc.."
+ ]
+}

@@ -1,0 +1,33 @@
+{
+ "source": "tower-fog.png",
+ "cell": 24.5,
+ "w": 13,
+ "h": 16,
+ "palette": {
+  "a": "#c5abe4",
+  "b": "#3f243b",
+  "c": "#f8e9cf",
+  "d": "#a189cd",
+  "e": "#e1bfeb",
+  "f": "#cab1ce",
+  "g": "#b493d3"
+ },
+ "rows": [
+  ".....g.......",
+  "...e...e...ee",
+  "...e..gee..ee",
+  ".....geeee.ee",
+  "..ge.gggee...",
+  "..gegggeg....",
+  ".....g.g.e...",
+  ".....bab.g...",
+  "....baba.....",
+  "...baaabb....",
+  "..afccccbb...",
+  ".acfccccbcb..",
+  ".aafccfbccab.",
+  "daaaaaafaaad.",
+  "daadaaaadddd.",
+  ".bbbddddbb..."
+ ]
+}

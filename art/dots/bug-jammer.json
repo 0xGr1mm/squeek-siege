@@ -1,0 +1,30 @@
+{
+ "source": "bug-jammer.png",
+ "cell": 33.25,
+ "w": 14,
+ "h": 13,
+ "palette": {
+  "a": "#2d110a",
+  "b": "#fcf125",
+  "c": "#9e9688",
+  "d": "#b44320",
+  "e": "#cb8e47",
+  "f": "#7e3a1d",
+  "g": "#8b735d"
+ },
+ "rows": [
+  ".....a...a....",
+  "......aaef....",
+  ".....fdddd....",
+  "adde.fabdbdea.",
+  ".fddegaadadd..",
+  "feedefcggg.ee.",
+  ".fefffffff..c.",
+  "..aaaddddaa.cc",
+  ".daaaaaea.fec.",
+  ".aaaafeead.cd.",
+  ".faaa....fa...",
+  "...ad....f....",
+  "...aa....aa..."
+ ]
+}
