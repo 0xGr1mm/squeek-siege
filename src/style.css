@@ -7,8 +7,8 @@
   --seed: #f5c451;
   --power: #7fd4ff;
   --red: #ff4b5c;
-  --mono: 'Pixelify Sans', ui-monospace, monospace;
-  --display: 'Doto', 'Pixelify Sans', monospace;
+  --mono: 'Pixelify Sans Variable', ui-monospace, monospace;
+  --display: 'Doto Variable', 'Pixelify Sans Variable', monospace;
 }
 * { box-sizing: border-box; }
 .brand h1, .stat b, .panel h2, .wavecard .big-n, .card h2, .score-big { font-variation-settings: 'ROND' 100; }

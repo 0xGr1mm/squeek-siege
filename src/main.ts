@@ -1,3 +1,6 @@
+// fonts ship with the site (OFL), so the hosted build has no external dependency
+import '@fontsource-variable/doto/full.css';
+import '@fontsource-variable/pixelify-sans/index.css';
 import './style.css';
 import { loadRounds, loadStatus, txUrl, type Round } from './data';
 import {
